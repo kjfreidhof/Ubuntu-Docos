@@ -35,6 +35,11 @@ done
 
 # this here adds and installs all packages 
 
+apt update 
+
+apt upgrade && apt full-upgrade 
+
+
 add-apt-repository ppa:obsproject/obs-studio
 apt update 
 
