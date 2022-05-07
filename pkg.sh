@@ -33,9 +33,38 @@ while true;do
         esac
 done
 
-# this here installs all packages from the pkg.txt file 
+# this here adds and installs all packages 
+
+add-apt-repository ppa:obsproject/obs-studio
+apt update 
+
+add-apt-repository ppa:kdenlive/kdenlive-stable
+apt update 
+
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | apt-key add - 
+
+echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
+
+ egrep -c '(vmx|svm)' /proc/cpuinfo
+
+
+apt update 
+
 xargs apt install -y <pkg.txt 
 
-apt-mark hold snapd 
+apt-mark hold snapd
 
+
+systemctl status libvirtd.service
+
+virsh net-start default
+
+virsh net-autostart default
+
+virsh net-list --all
+
+adduser $USERNAME libvirt
+
+adduser $USERNAME libvirt-qemu 
+                                      
 exit 
