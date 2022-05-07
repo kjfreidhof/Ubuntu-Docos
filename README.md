@@ -18,6 +18,14 @@ pkg.sh
 # Warning
 run this script at your own risk i am not responsible for breaking your system when you run this script 
 
+# First 
+
+make sure you have git installed if you dont have git installed do 
+
+sudo apt install git 
+
+for ubuntu 
+
 
 # The user.sh 
 

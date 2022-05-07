@@ -29,7 +29,7 @@ cp -r nvim ~/.config
 cp -r neofetch ~/.config 
 
 # This copies my bashrc to my home directory 
-cp .bashrc.bak ~/"$USERNAME"
+cp .bashrc.bak ~/$USERNAME
 
 
 # this makes a .icons directory and .themes directory 
