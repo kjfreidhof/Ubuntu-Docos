@@ -85,7 +85,6 @@ virt.sh sets up qemu/KVM
 
 i put this in a different script because it conflicts with pkg.sh 
 
-
 so to run this script do 
 
 chmod +x virt.sh 
@@ -94,6 +93,32 @@ then do
 
 sudo ./virt.sh 
 
+# brave.sh 
+
+this script installs the brave web browser 
+
+to run this script do 
+
+chmod +x brave.sh 
+
+then do 
+
+sudo ./brave.sh 
+
+
+# spotify.sh 
+this script here installs spotify 
+
+to run this script do 
+
+chmod +x spotify.sh 
+
+then do 
+
+sudo ./spotify.sh 
+
+# also spoiler window managers are coming soon :)
+ 
 # Then your done 
 :) enjoy 
 
