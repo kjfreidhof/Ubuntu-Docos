@@ -2,10 +2,9 @@
 
 # and this is Docos which is just my ubuntu script 
 
-
 # This script has alot going on with it so let me explain here the best i can 
 
-their are 4 scripts here 
+their are 6 scripts here 
 
 their is a 
 
@@ -16,6 +15,10 @@ remove.sh
 pkg.sh 
 
 virt.sh 
+
+brave.sh
+
+spotify.sh 
 
 # Warning
 run this script at your own risk i am not responsible for breaking your system when you run this script 
