@@ -29,7 +29,6 @@ ukui-wallpapers
 ubuntustudio-wallpapers-xenial
 ubuntustudio-wallpapers-legacy 
 ubuntustudio-wallpapers-jammy
-ubuntustudio-wallpapers-focal
 ubuntustudio-wallpapers-eoan
 ubuntustudio-wallpapers-bionic
 ubuntustudio-wallpapers
