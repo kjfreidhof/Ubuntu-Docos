@@ -33,23 +33,13 @@ while true;do
         esac
 done
 
-# this here adds and installs all packages 
+
+curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 apt update 
 
-apt upgrade && apt full-upgrade 
+xargs apt install -y <brave.txt 
 
 
-add-apt-repository ppa:obsproject/obs-studio
-apt update 
-
-add-apt-repository ppa:kdenlive/kdenlive-stable
-apt update 
-
-apt update 
-
-xargs apt install -y <pkg.txt 
-
-apt-mark hold snapd
-                                      
-exit 

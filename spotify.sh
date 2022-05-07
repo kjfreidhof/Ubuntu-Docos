@@ -33,23 +33,12 @@ while true;do
         esac
 done
 
-# this here adds and installs all packages 
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | apt-key add - 
+
+echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
 
 apt update 
 
-apt upgrade && apt full-upgrade 
+xargs apt install -y <spotify.txt 
 
-
-add-apt-repository ppa:obsproject/obs-studio
-apt update 
-
-add-apt-repository ppa:kdenlive/kdenlive-stable
-apt update 
-
-apt update 
-
-xargs apt install -y <pkg.txt 
-
-apt-mark hold snapd
-                                      
-exit 
+exit

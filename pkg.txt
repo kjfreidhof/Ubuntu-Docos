@@ -1,6 +1,6 @@
 curl 
-brave-browser 
-gnome-shelll-extension-manager
+qutebrowser  
+gnome-shell-extension-manager
 gnome-tweaks  
 neofetch 
 neovim 
@@ -9,8 +9,7 @@ terminator
 nodejs 
 flatpak
 ffmpeg 
-obs-studio 
-spotify-client 
+obs-studio  
 vlc 
 qemu-kvm
 libvirt-clients
@@ -60,7 +59,7 @@ ubuntu-wallpapers-trusty
 ubuntu-wallpapers-saucy
 ubuntu-wallpapers-raring
 ubuntu-restricted-extras
-ubunt-restricted-addons
+ubuntu-restricted-addons
 ubuntu-mate-wallpapers-complete 
 ubuntu-mate-wallpapers-common 
 ubuntu-mate-themes 
