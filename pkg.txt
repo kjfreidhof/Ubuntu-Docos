@@ -1,8 +1,7 @@
 curl 
 brave-browser 
 gnome-shelll-extension-manager
-gnome-tweaks 
-git 
+gnome-tweaks  
 neofetch 
 neovim 
 htop 
