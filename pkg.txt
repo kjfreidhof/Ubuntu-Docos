@@ -12,7 +12,6 @@ flatpak
 xubuntu-wallpapers 
 xubuntu-community-wallpapers-xenial 
 xubuntu-community-wallpapers-trusty 
-xubuntu-community-wallpapers-jammy
 xubuntu-community-wallpapers-focal
 xubuntu-community-wallpapers-bionic 
 xubuntu-community-wallpapers
@@ -50,4 +49,9 @@ ubuntu-wallpapers-trusty
 ubuntu-wallpapers-saucy
 ubuntu-wallpapers-raring
 ubuntu-restricted-extras
+ubunt-restricted-addons
+ubuntu-mate-wallpapers-complete 
+ubuntu-mate-wallpapers-common 
+ubuntu-mate-themes 
+ubuntu-mate-icon-themes 
 
