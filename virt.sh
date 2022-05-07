@@ -33,22 +33,16 @@ while true;do
         esac
 done
 
-# this here adds and installs all packages 
+egrep -c '(vmx|svm)' /proc/cpuinfo
 
-add-apt-repository ppa:obsproject/obs-studio
-apt update 
+systemctl status libvirtd.service
 
-add-apt-repository ppa:kdenlive/kdenlive-stable
-apt update 
+virsh net-start default
 
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | apt-key add - 
+virsh net-autostart default
 
-echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
+virsh net-list --all
 
-apt update 
+adduser $USERNAME libvirt
 
-xargs apt install -y <pkg.txt 
-
-apt-mark hold snapd
-                                      
-exit 
+adduser $USERNAME libvirt-qemu 

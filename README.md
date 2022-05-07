@@ -5,7 +5,7 @@
 
 # This script has alot going on with it so let me explain here the best i can 
 
-their are 3 scripts here 
+their are 4 scripts here 
 
 their is a 
 
@@ -14,6 +14,8 @@ user.sh
 remove.sh 
 
 pkg.sh 
+
+virt.sh 
 
 # Warning
 run this script at your own risk i am not responsible for breaking your system when you run this script 
@@ -62,7 +64,7 @@ Then finally do
 
 sudo ./remove.sh 
 
-#pkg.sh 
+# pkg.sh 
 pkg.sh this installs any packages from the pkg.txt file 
 
 to run this script make sure you use sudo it will not work with out sudo
@@ -73,9 +75,24 @@ chmod +x pkg.sh
 
 51 this will make the script executable       
 
-Then finally do
+Then do
 
 sudo ./pkg.sh
+
+# virt.sh 
+
+virt.sh sets up qemu/KVM 
+
+i put this in a different script because it conflicts with pkg.sh 
+
+
+so to run this script do 
+
+chmod +x virt.sh 
+
+then do 
+
+sudo ./virt.sh 
 
 # Then your done 
 :) enjoy 
