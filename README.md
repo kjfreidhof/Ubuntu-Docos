@@ -14,7 +14,7 @@ remove.sh
 
 pkg.sh 
 
-virt.sh 
+adblock.sh
 
 brave.sh
 
@@ -82,19 +82,23 @@ Then do
 
 sudo ./pkg.sh
 
-# virt.sh 
+# adblock.sh  
+this script runs the adblocker for spotify note 
 
-virt.sh sets up qemu/KVM 
+run the pkg.sh and the spotify.sh before runing this script im going to work on trying to put a desktop icon in the script 
 
-i put this in a different script because it conflicts with pkg.sh 
+so then you can just laumch it 
+
+with out runing the script inside the terminal but for now its a script that runs inside the terminal
+
 
 so to run this script do 
 
-chmod +x virt.sh 
+chmod +x adblock.sh 
 
 then do 
 
-sudo ./virt.sh 
+sudo ./adblock.sh 
 
 # brave.sh 
 
