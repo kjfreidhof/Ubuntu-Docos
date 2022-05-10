@@ -5,7 +5,7 @@
 FILE="/tmp/out.$$"
 GREP="/bin/grep"
 
-if ["$(id -u)" != "0"]; then
+if [ "$(id -u)" != "0" ]; then
         printf "This script must be ran as root"
         printf "using sudo"
         exit 1
@@ -33,12 +33,27 @@ while true;do
         esac
 done
 
+
+# this downloads and installs spotify
+
 curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | apt-key add - 
 
 echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
 
 apt update 
 
-xargs apt install -y <spotify.txt 
+xargs apt install -y <spotify.txt
+
+# this here grabs and installs the adblocker for spotify that is written in rust 
+
+git clone https://github.com/abba23/spotify-adblock.git
+
+cd spotify-adblock
+
+make 
+
+make install 
+
+
 
 exit

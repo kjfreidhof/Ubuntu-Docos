@@ -10,7 +10,9 @@ nodejs
 flatpak
 ffmpeg 
 obs-studio  
-vlc 
+vlc
+kdenlive
+gimp 
 qemu-kvm
 libvirt-clients
 libvirt-daemon-system 
@@ -19,6 +21,8 @@ virtinst
 libvirt-daemon 
 virt-manager 
 timeshift 
+build-essential 
+cargo 
 xubuntu-wallpapers 
 xubuntu-community-wallpapers-xenial 
 xubuntu-community-wallpapers-trusty 
