@@ -1,0 +1,7 @@
+xfburn 
+xfce4-terminal 
+mousepad 
+xfce4-taskmanager
+ 
+
+

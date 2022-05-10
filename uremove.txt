@@ -1,0 +1,4 @@
+rhythmbox 
+nemo 
+thunderbird 
+

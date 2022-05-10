@@ -1,7 +1,5 @@
 curl 
-qutebrowser  
-gnome-shell-extension-manager
-gnome-tweaks  
+qutebrowser    
 neofetch 
 neovim 
 htop 
