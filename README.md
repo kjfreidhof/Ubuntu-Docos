@@ -1,6 +1,6 @@
 # Hello my name is kjfreidhof also known as techdoc on youtube 
 
-# and this is Docos which is just my ubuntu script 
+# and this is Docos which is just my ubuntu scripts
 
 # This script has alot going on with it so let me explain here the best i can 
 
