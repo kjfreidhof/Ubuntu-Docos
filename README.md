@@ -4,21 +4,13 @@
 
 # This script has alot going on with it so let me explain here the best i can 
 
-their are 6 scripts here 
+their are 2 scripts here 
 
 their is a 
 
-user.sh 
-
-remove.sh 
-
-pkg.sh 
-
-adblock.sh
-
-brave.sh
-
-spotify.sh 
+Docos.sh 
+and a 
+firefox.sh 
 
 # Warning
 run this script at your own risk i am not responsible for breaking your system when you run this script 
@@ -32,99 +24,33 @@ sudo apt install git
 for ubuntu 
 
 
-# The user.sh 
+# The Docos.sh 
 
-user.sh copies over my bashrc and my themes and icons as well as my configs over to their respected places
+Docos.sh this is my ubuntu installer script what this does is it installs my version of ubuntu in one script that i want to use what it does is that it 
+gives you all of my configurations i use it installs all my applications that i use and removes all the applications i do not use 
 
-it copies the bashrc over to the home directory 
+to run Docos.sh do
 
-it copies the themes and icons over to the .themes and .icons directory 
-
-and it puts my configs over to the .config directory in the home directory 
-
-to run user.sh do
-
-chmod +x user.sh 
+chmod +x Docos.sh 
 
 this will make the script excecutable 
 
 then do 
 
-./user.sh 
+sudo ./Docos.sh 
 
-# remove.sh 
-remove.sh removes any uneccessary packages from the remove.txt file 
+# firefox.sh 
+firefox.sh is a fork of the firefox-dl script that i forked and it is a apart of Docos credit goes to arnaudbey the script was amazing i forked it for myself and made some changes to it and that script was what inspired this project right here Docos so big thanks goes to arnaudbey for creating this script the credit goes to him i just took it and made some tweaks to it and renamed the script  
 
-to run this script make sure you use sudo it will not work with out sudo
+to run this script do
 
-also then do
-
-chmod +x remove.sh 
+chmod +x firefox.sh 
 
 this will make the script executable 
 
 Then finally do 
 
-sudo ./remove.sh 
-
-# pkg.sh 
-pkg.sh this installs any packages from the pkg.txt file 
-
-to run this script make sure you use sudo it will not work with out sudo
-
-also then do 
-
-chmod +x pkg.sh
-
-51 this will make the script executable       
-
-Then do
-
-sudo ./pkg.sh
-
-# adblock.sh  
-this script runs the adblocker for spotify note 
-
-run the pkg.sh and the spotify.sh before runing this script im going to work on trying to put a desktop icon in the script 
-
-so then you can just laumch it 
-
-with out runing the script inside the terminal but for now its a script that runs inside the terminal
-
-
-so to run this script do 
-
-chmod +x adblock.sh 
-
-then do 
-
-sudo ./adblock.sh 
-
-# brave.sh 
-
-this script installs the brave web browser 
-
-to run this script do 
-
-chmod +x brave.sh 
-
-then do 
-
-sudo ./brave.sh 
-
-
-# spotify.sh 
-this script here installs spotify 
-
-to run this script do 
-
-chmod +x spotify.sh 
-
-then do 
-
-sudo ./spotify.sh 
-
-# also spoiler window managers are coming soon :)
+./firefox.sh 
  
 # Then your done 
 :) enjoy 
