@@ -18,8 +18,7 @@ bridge-utils
 virtinst
 libvirt-daemon 
 virt-manager 
-timeshift 
-build-essential 
+timeshift  
 cargo 
 xubuntu-wallpapers 
 xubuntu-community-wallpapers-xenial 
@@ -59,8 +58,6 @@ ubuntu-wallpapers-utopic
 ubuntu-wallpapers-trusty
 ubuntu-wallpapers-saucy
 ubuntu-wallpapers-raring
-ubuntu-restricted-extras
-ubuntu-restricted-addons
 ubuntu-mate-wallpapers-complete 
 ubuntu-mate-wallpapers-common 
 ubuntu-mate-themes 
