@@ -149,15 +149,21 @@ exit
 elif [ $CHOICE = 6 ]; then
 apt install task-kde-desktop
 cat kremove.txt | xargs apt remove -y 
+apt remove -y ubuntu-gnome-desktop
+apt remove -y vanilla-gnome-desktop
 exit
 
 elif [ $CHOICE = 7 ]; then
 apt install xfce4
-cat xremove.txt | xargs apt remove -y  
+cat xremove.txt | xargs apt remove -y
+apt remove -y vanilla-gnome-desktop
+apt remove -y ubuntu-gnome-desktop  
 exit 
 elif [ $CHOICE = 8 ]; then
 apt install ubuntu-mate-core
 cat mremove.txt | xargs apt remove -y 
+apt remove -y ubuntu-gnome-desktop
+apt remove -y vanilla-gnome-desktop
 exit
 
 elif [ $CHOICE = 9 ]; then
@@ -167,6 +173,8 @@ exit
 elif [ $CHOICE = 10 ]; then 
 apt install unity
 cat uremove.txt | xargs apt remove 
+apt remove -y vanilla-gnome-desktop
+apt remove -y ubuntu-gnome-desktop
 exit
 
 elif [ $CHOICE = 11 ]; then
@@ -181,10 +189,14 @@ exit
 
 elif [ $CHOICE = 13 ]; then
 apt install task-lxde-desktop
+apt remove -y vanila-gnome-desktop
+apt remove -y ubuntu-gnome-desktop
 exit
 
 elif [ $CHOICE = 14 ]; then 
 apt install lxqt
+apt remove -y vanilla-gnome-desktop
+apt remove -y ubuntu-gnome-desktop 
 exit
 
 elif [ $CHOICE = 15 ]; then
@@ -194,6 +206,8 @@ exit
 
 elif [ $CHOICE = 16 ]; then
 apt install ubuntu-budgie-desktop
+apt remove -y vanilla-gnome-desktop
+apt remove -y ubuntu-gnome-desktop
 exit
 
 else
