@@ -1,2 +1,0 @@
-gnome-shell-extension-manager
-gnome-tweaks 
