@@ -1,4 +1,5 @@
 #!/bin/bash 
+
 unzip nvim.zip  
 unzip neofetch.zip 
 cp -r nvim ~/.config 
@@ -32,14 +33,6 @@ cp -r Mkos-Big-Sur-Night ~/.icons
 
 cp -r Mkos-Big-Sur-Panel-white ~/.icons 
 
-tar -xvf  papirus-icon-theme-20220302.tar.gz
-
-cp -r Papirus ~/.icons
-
-cp -r Papirus-Dark ~/.icons
-
-cp -r Papirus-light ~/.icons 
-
 unzip gtk-master.zip 
 
 cp -r gtk-master ~/.themes 
@@ -60,8 +53,6 @@ tar -xvf Sweet.tar.xz
 
 cp -r Sweet ~/.themes
 
-
-
 snap remove firefox
 
 cat remove.txt | xargs apt remove -y 
@@ -77,14 +68,6 @@ sleep 3
 
 cat build.txt | xargs apt install -y 
 
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | apt-key add - 
-
-echo "deb http://repository.spotify.com stable non-free" | tee /etc/apt/sources.list.d/spotify.list
-
-apt update 
-
-cat spotify.txt | xargs apt install -y 
-
 add-apt-repository ppa:obsproject/obs-studio
 apt update 
 
@@ -94,129 +77,124 @@ apt update
 cat pkg.txt 
 sleep 3 
 
-while true;do 
-        read -p "Do you want to instal the following packages above? " yn 
-        case $yn in  
-                [Yy]*)make install; break;; 
-                [Nn]*)exit;;
-                *)printf "please answer yes or no.";;
-        esac
-done
+#while true;do 
+       # read -p "Do you want to instal the following packages above? " yn 
+       # case $yn in  
+             #   [Yy]*)make install; break;; 
+             #   [Nn]*)exit;;
+             #   *)printf "please answer yes or no.";;
+       # esac
+# done
 
 cat pkg.txt | xargs apt install -y 
 
+echo "Are you using the normal or minimal install of ubuntu? [1|2|]"
+echo "1, Normal install"
+echo "2, minimal install"
+
+read -rp "> " CHOICE
+
+if [ $CHOICE = 1 ]; then
+apt remove ubuntu-gnome-desktop -y
+continue 
+
+elif [ $CHOICE = 2 ]; then 
+apt remove vanilla-gnome-desktop 
+continue
 
 
-echo "Choose the window manager or desktop environment you want to install [1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|]"
+else
+
+	continue 
+fi
+
+
+
+echo "Choose the window manager to install? [1|2|]"
 echo "1, awesome"
-echo "2, dwm"
-echo "3, i3"
-echo "4, xmonad"
-echo "5, bspwm"
-echo "6, task-kde-desktop"
-echo "7, xfce4"
-echo "8, ubuntu-mate-core"
-echo "9, openbox"
-echo "10, unity"
-echo "11, enlightenment"
-echo "12, ubuntu-gnome-desktop"
-echo "13, task-lxde-desktop"
-echo "14, lxqt"
-echo "15, vanilla-gnome-desktop"
-echo "16, ubuntu-budgie-desktop"
+echo "2, i3"
 
 read -rp "> " CHOICE
 
 if [ $CHOICE = 1 ]; then
 apt install awesome
-exit
-elif [ $CHOICE = 2 ]; then 
-apt install dwm
-exit 
+continue
 
-elif [ $CHOICE = 3 ]; then
+elif [ $CHOICE = 2 ]; then
 apt install i3
+continue
+
+elif [ $CHOICE = 1 ]; then 
+cat awesome.txt | xargs apt installl -y
+continue 
+
+elif [$CHOICE = 3]; then 
+cat i3.txt | xargs apt install -y 
+continue 
+
+else 
+		continue 
+
+fi 
+
+
+
+
+echo "What web browser do you want? [1|2|3]"
+echo "1, firefox"
+echo "2, chromium"
+echo "3, qutebrowser"
+
+read -rp "> " CHOICE
+
+if [$CHOICE = 1 ]; then 
+add-apt-repository ppa:system76/pop -y
+continue
+
+elif [ $CHOICE = 2 ]; then 
+sudo add-apt-repository ppa:system76/pop -y 
+continue 
+
+elif [ $CHOICE = 3 ]; then 
+apt install qutebrowser -y 
+continue 
+
+elif [ $CHOICE = 1 ]; then
+cat firefox.txt | xargs apt install -y 
+continue
+
+
+elif [ $CHOICE = 2 ]; then
+cat chromium.txt | xargs apt install -y 
+continue 
+
+else 
+		continue 
+
+fi 
+
+
+echo "Do you want to reboot in to your new opreating system? [1|2|]"
+echo "1, reboot"
+echo "2, Dont reboot"
+
+if [ $CHOICE = 1 ]; then 
+reboot 
 exit 
 
-elif [ $CHOICE = 4 ]; then 
-apt install xmonad
+elif [ $CHOICE = 2 ]; then  
 exit 
 
-elif [ $CHOICE = 5 ]; then
-apt install bspwm
-exit 
+else 
+		exit
 
-elif [ $CHOICE = 6 ]; then
-apt install task-kde-desktop
-cat kremove.txt | xargs apt remove -y 
-apt remove -y ubuntu-gnome-desktop
-apt remove -y vanilla-gnome-desktop
-exit
-
-elif [ $CHOICE = 7 ]; then
-apt install xfce4
-cat xremove.txt | xargs apt remove -y
-apt remove -y vanilla-gnome-desktop
-apt remove -y ubuntu-gnome-desktop  
-exit 
-elif [ $CHOICE = 8 ]; then
-apt install ubuntu-mate-core
-cat mremove.txt | xargs apt remove -y 
-apt remove -y ubuntu-gnome-desktop
-apt remove -y vanilla-gnome-desktop
-exit
-
-elif [ $CHOICE = 9 ]; then
-apt install openbox 
-exit
-
-elif [ $CHOICE = 10 ]; then 
-apt install unity
-cat uremove.txt | xargs apt remove 
-apt remove -y vanilla-gnome-desktop
-apt remove -y ubuntu-gnome-desktop
-exit
-
-elif [ $CHOICE = 11 ]; then
-apt install enlightenment
-exit
-
-elif [ $CHOICE = 12 ]; then
-apt install ubuntu-gnome-desktop
-cat gpkg.txt | xargs apt install -y 
-
-exit
-
-elif [ $CHOICE = 13 ]; then
-apt install task-lxde-desktop
-apt remove -y vanila-gnome-desktop
-apt remove -y ubuntu-gnome-desktop
-exit
-
-elif [ $CHOICE = 14 ]; then 
-apt install lxqt
-apt remove -y vanilla-gnome-desktop
-apt remove -y ubuntu-gnome-desktop 
-exit
-
-elif [ $CHOICE = 15 ]; then
-apt install vanilla-gnome-desktop
-cat gpkg | xargs apt install -y 
-exit
-
-elif [ $CHOICE = 16 ]; then
-apt install ubuntu-budgie-desktop
-apt remove -y vanilla-gnome-desktop
-apt remove -y ubuntu-gnome-desktop
-exit
-
-else
+fi 
 
 
-    exit
-    reboot
 
-fi
+
+
+
 
 
 
