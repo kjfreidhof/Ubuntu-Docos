@@ -1,6 +1,0 @@
-mate-terminal 
-xterm 
-caja
- 
-
-
