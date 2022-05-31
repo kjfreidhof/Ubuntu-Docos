@@ -1,61 +1,61 @@
 #!/bin/bash 
 
-unzip nvim.zip  
-unzip neofetch.zip 
-cp -r nvim ~/.config 
+#unzip nvim.zip  
+#unzip neofetch.zip 
+#cp -r nvim ~/.config 
 
-cp -r neofetch ~/.config       
-cp .bashrc.bak ~/$USERNAME
-
-
-mkdir -p /home/"$USERNAME"/.icons 
-mkdir -p /home/"$USERNAME"/.themes
-
-tar -xvf 01-McMojave-circle.tar.xz 
-
-cp -r McMojave-circle ~/.icons
-cp -r McMojave-circle-dark ~/,icons
-
-tar -xvf candy-icons.tar.xz
-
-cp -r candy-icons ~/.icons 
-
-unzip Dracula.zip
-
-cp -r Dracula ~/.icons 
+#cp -r neofetch ~/.config       
+#cp .bashrc.bak ~/$USERNAME
 
 
-tar -xvf Mkos-Big-Sur.tar.xz
+#mkdir -p /home/"$USERNAME"/.icons 
+#mkdir -p /home/"$USERNAME"/.themes
 
-cp -r Mkos-Big-Sur ~/.icons
+#tar -xvf 01-McMojave-circle.tar.xz 
 
-cp -r Mkos-Big-Sur-Night ~/.icons
+#cp -r McMojave-circle ~/.icons
+#cp -r McMojave-circle-dark ~/,icons
 
-cp -r Mkos-Big-Sur-Panel-white ~/.icons 
+#tar -xvf candy-icons.tar.xz
 
-unzip gtk-master.zip 
+#cp -r candy-icons ~/.icons 
 
-cp -r gtk-master ~/.themes 
+#unzip Dracula.zip
 
-unzip Gruvbox-Dark.zip
+#cp -r Dracula ~/.icons 
 
-cp -r Gruvbox-Dark ~/.themes 
 
-tar -xvf Mojave-dark.tar.xz
+#tar -xvf Mkos-Big-Sur.tar.xz
 
-cp -r Mojave-dark ~/.themes
+#cp -r Mkos-Big-Sur ~/.icons
 
-unzip Ubuntu-Monterey.zip 
+#cp -r Mkos-Big-Sur-Night ~/.icons
 
-cp -r Ubuntu-Monterey ~/.themes 
+#cp -r Mkos-Big-Sur-Panel-white ~/.icons 
 
-tar -xvf Sweet.tar.xz
+#unzip gtk-master.zip 
 
-cp -r Sweet ~/.themes
+#cp -r gtk-master ~/.themes 
 
-snap remove firefox
+#unzip Gruvbox-Dark.zip
 
-cat remove.txt | xargs apt remove -y 
+#cp -r Gruvbox-Dark ~/.themes 
+
+#tar -xvf Mojave-dark.tar.xz
+
+#cp -r Mojave-dark ~/.themes
+
+#unzip Ubuntu-Monterey.zip 
+
+#cp -r Ubuntu-Monterey ~/.themes 
+
+#tar -xvf Sweet.tar.xz
+
+#cp -r Sweet ~/.themes
+
+#snap remove firefox
+
+#cat remove.txt | xargs apt remove -y 
 
 apt update
 sleep 3
@@ -63,19 +63,17 @@ sleep 3
 apt upgrade && apt full-upgrade
 sleep 3 
 
-cat build.txt 
-sleep 3
+#cat build.txt 
+#sleep 3
 
-cat build.txt | xargs apt install -y 
+#cat build.txt | xargs apt install -y 
 
-add-apt-repository ppa:obsproject/obs-studio
-apt update 
+#add-apt-repository ppa:obsproject/obs-studio
+#apt update 
 
-add-apt-repository ppa:kdenlive/kdenlive-stable 
-apt update
-
-cat pkg.txt 
-sleep 3 
+#add-apt-repository ppa:kdenlive/kdenlive-stable 
+#apt update
+#sleep 3 
 
 #while true;do 
        # read -p "Do you want to instal the following packages above? " yn 
@@ -86,11 +84,9 @@ sleep 3
        # esac
 # done
 
-cat pkg.txt | xargs apt install -y 
-
-echo "Are you using the normal or minimal install of ubuntu? [1|2|]"
-echo "1, Normal install"
-echo "2, minimal install"
+echo "Do you want to remove the Desktop environment you are using? [1|2|]"
+echo "1, Yes"
+echo "2, No"
 
 read -rp "> " CHOICE
 
@@ -99,7 +95,7 @@ apt remove ubuntu-gnome-desktop -y
 continue 
 
 elif [ $CHOICE = 2 ]; then 
-apt remove vanilla-gnome-desktop 
+exit 
 continue
 
 
@@ -125,13 +121,20 @@ apt install i3
 continue
 
 elif [ $CHOICE = 1 ]; then 
-cat awesome.txt | xargs apt installl -y
+cat awesome.txt | xargs apt install -y
+continue 
+
+elif [$CHOICE = 2]; then 
+cat i3.txt | xargs apt install -y 
+continue 
+
+
+elif [ $CHOICE = 1 ]; then 
 mkdir -p ~/.config/awesome 
 cp rc.lua ~/.config/awesome
 continue 
 
-elif [$CHOICE = 3]; then 
-cat i3.txt | xargs apt install -y 
+elif [$CHOICE = 2]; then 
 unzip i3.zip 
 unzip polybar.zip
 cp -r polybar ~/.config 
@@ -139,6 +142,8 @@ continue
 
 else 
 		continue 
+
+fi
 
 
 
