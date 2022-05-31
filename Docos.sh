@@ -126,18 +126,52 @@ continue
 
 elif [ $CHOICE = 1 ]; then 
 cat awesome.txt | xargs apt installl -y
+mkdir -p ~/.config/awesome 
+cp rc.lua ~/.config/awesome
 continue 
 
 elif [$CHOICE = 3]; then 
 cat i3.txt | xargs apt install -y 
+unzip i3.zip 
+unzip polybar.zip
+cp -r polybar ~/.config 
 continue 
 
 else 
 		continue 
 
-fi 
 
 
+printf "if you install i3 \n"
+sleep 5 
+printf "then after this script is done \n"
+sleep 5
+printf "press enter when you boot it up for the first time \n"
+sleep 5
+printf "copy my config over to the .config directory \n"
+sleep 5
+printf "to do that press super or windows key and enter do cp -r i3 ~/.config \n"
+sleep 5
+printf "then after that reload i3 \n"
+sleep 5
+printf "by doing super or the windows key and shift + r \n"
+sleep 5
+printf "then you will have my i3 config \n"
+sleep 5
+printf "i cant copy it over for you in my script \n"
+sleep 5
+printf "Because when you boot into i3  \n"
+sleep 5
+printf "and you press enter on the welcome screen \n"
+sleep 5
+printf "it will over write my config if i copy it over for you in my script\n"
+sleep 5
+printf "if you installed awesome then you have it easy \n"
+sleep 5
+printf "you will have my config when you boot into\n"
+sleep 5
+printf "the awesome window manager and you will be good to go \n"
+sleep 5
 
 
 echo "What web browser do you want? [1|2|3]"
